@@ -1,0 +1,39 @@
+def menu_driven_program():
+	lst = []  # Initialize an empty list
+
+	while True:
+		print("1. Add")
+		print("2. Remove")
+		print("3. Display")
+		print("4. Quit")
+		try:
+			choice = int(input("Enter choice: "))
+		except ValueError:
+			print("Invalid choice")
+			continue
+		if choice == 1:
+			num = int(input("Integer: "))
+			lst.append(num)
+			print(f"List after adding: {lst}")
+		elif choice == 2:
+			if lst:
+				num = int(input("Integer: "))
+				if num in lst:
+					lst.remove(num)
+					print(f"List after removing: {lst}")
+				else:
+					print("Element not found")
+			else:
+				print("List is empty")
+		elif choice == 3:
+			if lst:
+				print(lst)
+			else:
+				print("List is empty")
+		elif choice == 4:
+			break
+		else:
+			print("Invalid choice")
+
+# Run the menu-driven program
+menu_driven_program()
