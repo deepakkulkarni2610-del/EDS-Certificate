@@ -1,0 +1,32 @@
+import numpy as np
+
+# write your code here...
+
+def create_and_display_array():
+
+	rows, cols = map(int, input().split())
+	
+
+
+	elements = []
+	for i in range(rows):
+		row = list(map(int, input().split()))
+		elements.extend(row)
+	
+
+	array = np.array(elements)
+	
+
+	array = array.reshape((rows, cols))
+	
+
+
+	print(array)
+
+
+	print(array.ndim)
+	print(array.shape)
+	print( array.size)
+
+
+create_and_display_array()
